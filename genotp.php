@@ -26,8 +26,8 @@
 	if ($conn->query($sql) === TRUE) {
 	    echo "New record created successfully";
 		 include('way2sms-api.php');
-	    sendWay2SMS ( '9059979265' , 'Theknight7' , '8500859900' , $otp);   
-	    //sendWay2SMS ( '9059979265' , 'Theknight7' , '9059979265,9059979265' , 'Hello World');
+	    sendWay2SMS ( 'your no.' , 'pass' , 'reciever no.' , $otp);   
+	    
 	} else {
 	    echo "Error: " . $sql . "<br>" . $conn->error;
 	}
