@@ -1,8 +1,8 @@
 <?php
 	header('Access-Control-Allow-Origin: *'); 
-	$servername = "31.170.166.61";
-	$username = "u903561932_root";
-	$password = "Theknight7";
+	$servername = "";
+	$username = "";
+	$password = "";
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password);
@@ -20,7 +20,7 @@
 	$flat=1;
 	//$otp=rand(1000,9999);
 
-	$sql = "SELECT * from u903561932_excit.otp where mob =".$data->mobile;
+	$sql = "SELECT * from otp where mob =".$data->mobile;
 	$result = $conn->query($sql);
 	if ($result->num_rows > 0) {
 	    // output data of each row
@@ -28,7 +28,7 @@
 	    	if($row['otp']==$data->otp){
 	    		echo "Open The Gate!";
 			    		//$flat=1;
-				$sql1 = "DELETE  from u903561932_excit.temp where mob= '".$data->mobile."' AND flat ='".$flat."'";		
+				$sql1 = "DELETE  from temp where mob= '".$data->mobile."' AND flat ='".$flat."'";		
 
 				if ($conn->query($sql1) === TRUE) {
 				    //echo "New record created successfully";
