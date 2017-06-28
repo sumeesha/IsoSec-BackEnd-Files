@@ -1,8 +1,8 @@
 <?php
 	header('Access-Control-Allow-Origin: *'); 
-	$servername = "31.170.166.61";
-	$username = "u903561932_root";
-	$password = "Theknight7";
+	$servername = "";
+	$username = "";
+	$password = "";
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password);
@@ -20,7 +20,7 @@
 	$flat=1;
 	//$otp=rand(1000,9999);
 
-	$sql1 = "DELETE  from u903561932_excit.temp_nv where type= '".$data->type."'";		
+	$sql1 = "DELETE  from temp_nv where type= '".$data->type."'";		
 
 				if ($conn->query($sql1) === TRUE) {
 				    echo "Granted Access to the ".$data->type."'";
