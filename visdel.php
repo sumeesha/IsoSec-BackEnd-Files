@@ -1,8 +1,8 @@
 <?php
 	header('Access-Control-Allow-Origin: *'); 
-	$servername = "31.170.166.61";
-	$username = "u903561932_root";
-	$password = "Theknight7";
+	$servername = "";
+	$username = "";
+	$password = "";
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password);
@@ -19,7 +19,7 @@
 
 	if($data->data->name == "-"){
 		$flat=1;
-		$sql = "DELETE  from u903561932_excit.temp_nv where type= '".$data->data->type."' AND flat ='".$flat."'";		
+		$sql = "DELETE  from temp_nv where type= '".$data->data->type."' AND flat ='".$flat."'";		
 
 		if ($conn->query($sql) === TRUE) {
 		    echo "New record created successfully";
@@ -29,7 +29,7 @@
 
 	}else{
 		$flat=1;
-		$sql1 = "DELETE  from u903561932_excit.temp where name= '".$data->data->name."' AND flat ='".$flat."'";		
+		$sql1 = "DELETE  from temp where name= '".$data->data->name."' AND flat ='".$flat."'";		
 
 		if ($conn->query($sql1) === TRUE) {
 		    echo "New record created successfully";
